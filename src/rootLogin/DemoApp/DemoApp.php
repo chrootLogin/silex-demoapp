@@ -9,6 +9,7 @@ class DemoApp extends AbstractBundleProvider
 {
     public function register(Application $app)
     {
+        $this->addCommands($app);
         $this->addTwigLoaderFilesystemPath($app);
         $this->addControllers($app);
     }
