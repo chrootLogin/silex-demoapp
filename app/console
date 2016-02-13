@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+set_time_limit(0);
+
+$loader = require_once __DIR__ . '/autoload.php';
+
+use Symfony\Component\Console\Input\ArgvInput;
+
+$input = new ArgvInput();
+$env = $input->getParameterOption(array('--env', '-e'), getenv('APP_ENV') ?: 'dev');
+$debug = getenv('APP_DEBUG') !== '0' && !$input->hasParameterOption(array('--no-debug', '')) && $env !== 'prod';
+
+$app = require(__DIR__ . '/bootstrap.php');
+
+/** @var Silex\Application $app */
+$app->boot();
+$app['console']->run();

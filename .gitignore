@@ -1,0 +1,6 @@
+/vendor/
+/.vagrant/
+/app/config/parameters.yml
+/app/example.db
+/app/logs
+/app/cache

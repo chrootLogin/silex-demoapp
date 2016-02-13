@@ -1,0 +1,3 @@
+db.options:
+  driver: pdo_sqlite
+  path: %root_dir%/app/example.db

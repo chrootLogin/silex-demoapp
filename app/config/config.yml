@@ -1,0 +1,20 @@
+orm.proxies_dir: %root_dir%/app/cache/%env%/orm/proxies
+translation_cache: %root_dir%/app/cache/%env%/translation
+route_controller_cache: %root_dir%/app/cache/%env%/controller
+twig.options:
+  cache: %root_dir%/app/cache/%env%/twig
+
+security.firewalls:
+  secured_area:
+    pattern: '^.*$'
+    anonymous: true
+    remember_me:
+    form:
+      login_path: /user/login
+      check_path: /user/login_check
+    logout:
+      logout_path: /user/logout
+
+user.options:
+  templates:
+    layout: @rootLoginDemoBundle\layout.html.twig
