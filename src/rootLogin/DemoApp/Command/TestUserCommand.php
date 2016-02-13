@@ -11,7 +11,7 @@ class TestUserCommand extends AbstractPimpleCommand
     protected function configure()
     {
         $this
-            ->setName('demoapp:createtestusers')
+            ->setName('demoapp:resetusers')
             ->setDescription('Create Test Users')
         ;
     }
@@ -25,16 +25,22 @@ class TestUserCommand extends AbstractPimpleCommand
     {
         $app = $this->container;
 
+        $users = $user = $app['user.manager']->findBy();
+
+        foreach($users as $user) {
+            $app['user.manager']->create($user);
+        }
+
         /** @var \rootLogin\UserProvider\Entity\User $user */
         $user = $app['user.manager']->create("testuser@example.com", "TestUser");
         $user->setEnabled(true);
-        $app['user.manager']->insert($user);
+        $app['user.manager']->save($user);
 
         /** @var \rootLogin\UserProvider\Entity\User $admin */
         $admin = $app['user.manager']->create("adminuser@example.com", "AdminUser");
         $admin->setEnabled(true);
         $admin->addRole('ROLE_ADMIN');
-        $app['user.manager']->insert($admin);
+        $app['user.manager']->save($admin);
 
         $output->writeln('<info>success</info>');
     }

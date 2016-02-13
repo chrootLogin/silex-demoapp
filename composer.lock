@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a2dc18d9b3b303f3b8a141d1390f9700",
-    "content-hash": "0194d82dc6bec7734450ca4c2577f07f",
+    "hash": "de55b821f23672e9fd1f3cabc4c78ca0",
+    "content-hash": "2ea18adf8c9c06ee7c7910552f5aa814",
     "packages": [
         {
             "name": "dflydev/doctrine-orm-service-provider",
@@ -995,18 +995,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/chrootLogin/silex-userprovider.git",
-                "reference": "b9c25d74ed406b6f0bc71a616b7861853ece53b7"
+                "reference": "82f0806f7c9ac2a830197121bb7da414ad16262f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/b9c25d74ed406b6f0bc71a616b7861853ece53b7",
-                "reference": "b9c25d74ed406b6f0bc71a616b7861853ece53b7",
+                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/82f0806f7c9ac2a830197121bb7da414ad16262f",
+                "reference": "82f0806f7c9ac2a830197121bb7da414ad16262f",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "~2.4",
                 "jasongrimes/paginator": "~1.0",
-                "php": ">=5.3.0",
+                "php": ">=5.4.0",
                 "silex/silex": "~1.0",
                 "swiftmailer/swiftmailer": "~5.3",
                 "symfony/security": "~2.3",
@@ -1019,8 +1019,10 @@
                 "jasongrimes/silex-simpleuser": "*"
             },
             "require-dev": {
+                "dflydev/doctrine-orm-service-provider": " ~1.0",
                 "ext-pdo_sqlite": "*",
-                "phpunit/phpunit": "~4.2"
+                "phpunit/phpunit": "~4.2",
+                "symfony/console": "~2.8"
             },
             "suggest": {
                 "dflydev/doctrine-orm-service-provider": "Allows the use of doctrine orm.",
@@ -1050,7 +1052,7 @@
                 "user",
                 "user provider"
             ],
-            "time": "2016-02-11 19:30:07"
+            "time": "2016-02-13 19:12:18"
         },
         {
             "name": "saxulum/saxulum-annotation-manager",
