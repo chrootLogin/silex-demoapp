@@ -4,3 +4,4 @@
 /app/example.db
 /app/logs
 /app/cache
+deploy.php

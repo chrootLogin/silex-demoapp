@@ -17,4 +17,4 @@ security.firewalls:
 
 user.options:
   templates:
-    layout: @rootLoginDemoBundle\layout.html.twig
+    layout: @rootLoginDemoApp\layout.html.twig
