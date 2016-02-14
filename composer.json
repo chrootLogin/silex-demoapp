@@ -38,5 +38,15 @@
     "psr-0": {
       "rootLogin": "src/"
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "mkdir -p app/cache",
+      "chmod 777 app/cache"
+    ],
+    "post-update-cmd": [
+      "mkdir -p app/cache",
+      "chmod 777 app/cache"
+    ]
   }
 }
