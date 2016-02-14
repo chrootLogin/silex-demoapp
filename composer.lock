@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "de55b821f23672e9fd1f3cabc4c78ca0",
+    "hash": "3c8114739e15d5a904edcc7327efe7f4",
     "content-hash": "2ea18adf8c9c06ee7c7910552f5aa814",
     "packages": [
         {
@@ -995,12 +995,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/chrootLogin/silex-userprovider.git",
-                "reference": "4d65929955dbc65c5d57d0fb8b2c12e639a76b19"
+                "reference": "80b158568231398bd8993f0da99d1054427c3561"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/4d65929955dbc65c5d57d0fb8b2c12e639a76b19",
-                "reference": "4d65929955dbc65c5d57d0fb8b2c12e639a76b19",
+                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/80b158568231398bd8993f0da99d1054427c3561",
+                "reference": "80b158568231398bd8993f0da99d1054427c3561",
                 "shasum": ""
             },
             "require": {
@@ -1052,7 +1052,7 @@
                 "user",
                 "user provider"
             ],
-            "time": "2016-02-14 16:17:41"
+            "time": "2016-02-14 18:06:40"
         },
         {
             "name": "saxulum/saxulum-annotation-manager",
