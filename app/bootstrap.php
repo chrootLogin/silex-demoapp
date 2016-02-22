@@ -14,6 +14,9 @@ use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\SecurityServiceProvider;
 use Silex\Provider\RememberMeServiceProvider;
+use Silex\Provider\FormServiceProvider;
+use Silex\Provider\ValidatorServiceProvider;
+use Silex\Provider\SwiftmailerServiceProvider;
 use Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 use Igorw\Silex\ConfigServiceProvider;
 use rootLogin\DemoApp\DemoApp;
@@ -40,10 +43,13 @@ $app->register(new DoctrineOrmManagerRegistryProvider());
 $app->register(new UrlGeneratorServiceProvider());
 $app->register(new TranslationServiceProvider());
 $app->register(new TranslationProvider());
+$app->register(new FormServiceProvider());
+$app->register(new ValidatorServiceProvider());
 $app->register(new TwigServiceProvider());
 $app->register(new SecurityServiceProvider());
 $app->register(new RememberMeServiceProvider());
 $app->register(new UserProviderServiceProvider());
+$app->register(new SwiftmailerServiceProvider());
 
 $app->register(new ConfigServiceProvider($app['root'] . "/app/config/config.yml", array(
     "root_dir" => $app['root'],
