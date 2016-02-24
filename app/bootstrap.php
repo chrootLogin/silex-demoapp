@@ -22,6 +22,10 @@ use Igorw\Silex\ConfigServiceProvider;
 use rootLogin\DemoApp\DemoApp;
 use rootLogin\UserProvider\Provider\UserProviderServiceProvider;
 use rootLogin\UserProvider\Provider\UserProviderControllerProvider;
+use Sorien\Provider\PimpleDumpProvider;
+use Symfony\Component\Validator\Mapping\Factory\LazyLoadingMetadataFactory;
+use Symfony\Component\Validator\Mapping\Loader\AnnotationLoader;
+use Doctrine\Common\Annotations\AnnotationReader;
 
 // annotation registry
 AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
@@ -44,12 +48,21 @@ $app->register(new UrlGeneratorServiceProvider());
 $app->register(new TranslationServiceProvider());
 $app->register(new TranslationProvider());
 $app->register(new FormServiceProvider());
-$app->register(new ValidatorServiceProvider());
+$app->register(new ValidatorServiceProvider(), [
+    'validator.mapping.class_metadata_factory' => new LazyLoadingMetadataFactory(
+        new AnnotationLoader(new AnnotationReader()),
+        (extension_loaded('apc') ? new \Doctrine\Common\Cache\ApcuCache() : null)
+    ),
+]);
 $app->register(new TwigServiceProvider());
 $app->register(new SecurityServiceProvider());
 $app->register(new RememberMeServiceProvider());
 $app->register(new UserProviderServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
+
+if($app['debug'] == true) {
+    $app->register(new PimpleDumpProvider());
+}
 
 $app->register(new ConfigServiceProvider($app['root'] . "/app/config/config.yml", array(
     "root_dir" => $app['root'],

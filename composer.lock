@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c8114739e15d5a904edcc7327efe7f4",
-    "content-hash": "2ea18adf8c9c06ee7c7910552f5aa814",
+    "hash": "06b0fb8659256a307b1f7f82ae08ca72",
+    "content-hash": "f55ab38b8cfd69763d806cde634ad390",
     "packages": [
         {
             "name": "dflydev/doctrine-orm-service-provider",
@@ -999,7 +999,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/b63754672a23cc5725051819dab5093061dddc1e",
+                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/772dc94b8e2253de20a6eb31f99ac1d32899d2cb",
                 "reference": "b63754672a23cc5725051819dab5093061dddc1e",
                 "shasum": ""
             },
@@ -3219,7 +3219,50 @@
             "time": "2016-01-25 21:22:18"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "sorien/silex-pimple-dumper",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sorien/silex-pimple-dumper.git",
+                "reference": "867b47181aab86b79cc78bad953419c1a327b2c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sorien/silex-pimple-dumper/zipball/867b47181aab86b79cc78bad953419c1a327b2c6",
+                "reference": "867b47181aab86b79cc78bad953419c1a327b2c6",
+                "shasum": ""
+            },
+            "require-dev": {
+                "silex/silex": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sorien\\Provider\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stanislav Turza",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Pimple File Dumper - Helper Provider for Silex Idea Plugin",
+            "keywords": [
+                "dumper",
+                "idea",
+                "plugin",
+                "silex"
+            ],
+            "time": "2015-11-11 07:16:28"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {

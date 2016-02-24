@@ -5,3 +5,4 @@
 /app/logs
 /app/cache
 deploy.php
+pimple.json
