@@ -29,4 +29,4 @@ This application supports [vagrant](http://vagrantup.com) for creating the devel
 2. Make sure that the dependencies for vagrant are installed.
 3. Do a `vagrant up`
 4. Then you can install the dependencies with `composer install`. 
-5. Afterwards browse to [demoapp.dev](http://demoapp.dev).
+5. Afterwards browse to [demoapp.lo](http://demoapp.lo).
