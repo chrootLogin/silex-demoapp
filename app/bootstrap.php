@@ -26,6 +26,7 @@ use Sorien\Provider\PimpleDumpProvider;
 use Symfony\Component\Validator\Mapping\Factory\LazyLoadingMetadataFactory;
 use Symfony\Component\Validator\Mapping\Loader\AnnotationLoader;
 use Doctrine\Common\Annotations\AnnotationReader;
+use Doctrine\Common\Cache\ApcuCache;
 
 // annotation registry
 AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
@@ -46,12 +47,11 @@ $app->register(new DoctrineOrmServiceProvider());
 $app->register(new DoctrineOrmManagerRegistryProvider());
 $app->register(new UrlGeneratorServiceProvider());
 $app->register(new TranslationServiceProvider());
-$app->register(new TranslationProvider());
 $app->register(new FormServiceProvider());
 $app->register(new ValidatorServiceProvider(), [
     'validator.mapping.class_metadata_factory' => new LazyLoadingMetadataFactory(
         new AnnotationLoader(new AnnotationReader()),
-        (extension_loaded('apc') ? new \Doctrine\Common\Cache\ApcuCache() : null)
+        (extension_loaded('apc') ? new ApcuCache() : null)
     ),
 ]);
 $app->register(new TwigServiceProvider());
