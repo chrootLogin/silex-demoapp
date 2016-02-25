@@ -18,3 +18,5 @@ security.firewalls:
 user.options:
   templates:
     layout: @rootLoginDemoApp\layout.html.twig
+  emailConfirmation:
+    required: true
