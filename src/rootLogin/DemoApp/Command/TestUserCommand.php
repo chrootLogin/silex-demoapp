@@ -25,7 +25,7 @@ class TestUserCommand extends AbstractPimpleCommand
     {
         $app = $this->container;
 
-        $users = $user = $app['user.manager']->findBy();
+        $users = $app['user.manager']->findBy();
         foreach($users as $user) {
             $app['user.manager']->delete($user);
         }

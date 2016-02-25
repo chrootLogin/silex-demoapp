@@ -995,12 +995,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/chrootLogin/silex-userprovider.git",
-                "reference": "b63754672a23cc5725051819dab5093061dddc1e"
+                "reference": "7a17e86b9c14cfdf054dd1764b412d0115cf9eaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/772dc94b8e2253de20a6eb31f99ac1d32899d2cb",
-                "reference": "b63754672a23cc5725051819dab5093061dddc1e",
+                "url": "https://api.github.com/repos/chrootLogin/silex-userprovider/zipball/7a17e86b9c14cfdf054dd1764b412d0115cf9eaa",
+                "reference": "7a17e86b9c14cfdf054dd1764b412d0115cf9eaa",
                 "shasum": ""
             },
             "require": {
@@ -1055,7 +1055,7 @@
                 "user",
                 "user provider"
             ],
-            "time": "2016-02-22 20:53:32"
+            "time": "2016-02-24 21:58:41"
         },
         {
             "name": "saxulum/saxulum-annotation-manager",
