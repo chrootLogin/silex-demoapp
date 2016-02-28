@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app.request.locale }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +36,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ path('user.list') }}">List users</a></li>
+                        <li><a href="{{ path('user.list') }}">{{ 'List users' | trans({}, 'messages') }}</a></li>
                         {% if app.user %}
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -45,14 +45,14 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{{ path('user') }}"><span class="glyphicon glyphicon-user"></span> View your profile</a></li>
-                                    <li><a href="{{ path('user.edit', { id: app.user.id }) }}"><span class="glyphicon glyphicon-edit"></span> Edit your profile</a></li>
+                                    <li><a href="{{ path('user.profile-edit') }}"><span class="glyphicon glyphicon-edit"></span> Edit your profile</a></li>
                                     <li><a href="{{ path('user.change-password') }}"><span class="glyphicon glyphicon-edit"></span> Change your password</a></li>
                                     <li><a href="{{ path('user.logout') }}"><span class="glyphicon glyphicon-off"></span> Sign out</a></li>
                                 </ul>
                             </li>
                         {% else %}
-                            <li><a href="{{ path('user.login') }}">Sign in</a></li>
-                            <li><a href="{{ path('user.register') }}">Create account</a></li>
+                            <li><a href="{{ path('user.login') }}">{{ 'Sign in' | trans({}, 'messages') }}</a></li>
+                            <li><a href="{{ path('user.register') }}">{{ 'Create account' | trans({}, 'messages') }}</a></li>
                         {% endif %}
                     </ul>
                 </div><!-- /.navbar-collapse -->
